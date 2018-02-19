@@ -1,0 +1,37 @@
+{
+    "name": "kiwi-suite/command-bus",
+    "description": "kiwi-suite/command-bus",
+    "license": "proprietary",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Thomas Payer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.1",
+        "league/tactician": "^1.0",
+        "league/tactician-container": "^2.0",
+        "kiwi-suite/entity": "dev-develop",
+        "kiwi-suite/common-types": "dev-develop",
+        "bernard/bernard": "^1.0@dev"
+    },
+    "require-dev": {
+        "kiwi-suite/application": "dev-develop",
+        "kiwi-suite/database": "dev-develop",
+        "kiwi-suite/application-console": "dev-develop",
+        "kiwi-suite/servicemanager": "dev-develop",
+        "friendsofphp/php-cs-fixer": "^2.5",
+        "phpunit/phpunit": "^6.0.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "KiwiSuite\\CommandBus\\": "src/CommandBus/"
+        }
+    },
+    "scripts": {
+        "fix-cs": "vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix"
+    }
+}
