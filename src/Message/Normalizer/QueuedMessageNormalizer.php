@@ -1,22 +1,22 @@
 <?php
-namespace KiwiSuite\CommandBus\Message;
+namespace KiwiSuite\CommandBus\Message\Normalizer;
 
 use Assert\Assertion;
 use Bernard\Normalizer\AbstractAggregateNormalizerAware;
+use KiwiSuite\CommandBus\Message\QueuedMessage;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
-final class QueueMessageNormalizer extends AbstractAggregateNormalizerAware implements NormalizerInterface, DenormalizerInterface
+final class QueuedMessageNormalizer extends AbstractAggregateNormalizerAware implements NormalizerInterface, DenormalizerInterface
 {
     public function normalize($object, $format = null, array $context = [])
     {
         return [
-            'class' => get_class($object->getCommand()),
+            'class' => get_class($object->getMessage()),
             'name' => $object->getName(),
-            'data' => $this->aggregate->normalize($object->getCommand()),
+            'data' => $this->aggregate->normalize($object->getMessage()),
         ];
     }
-
     /**
      * {@inheritdoc}
      */
@@ -24,21 +24,18 @@ final class QueueMessageNormalizer extends AbstractAggregateNormalizerAware impl
     {
         return $data instanceof QueuedMessage;
     }
-
     /**
      * {@inheritdoc}
      */
     public function denormalize($data, $class, $format = null, array $context = [])
     {
         Assertion::choicesNotEmpty($data, ['class', 'name', 'data']);
-
         Assertion::classExists($data['class']);
-
-        $object = new QueuedMessage($this->aggregate->denormalize($data['data'], $data['class']), $data['name']);
-
+        $object = new QueuedMessage(
+            $this->aggregate->denormalize($data['data'], $data['class'])
+        );
         return $object;
     }
-
     /**
      * {@inheritdoc}
      */

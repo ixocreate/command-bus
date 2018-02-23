@@ -2,7 +2,6 @@
 namespace KiwiSuite\CommandBus\ConfiguratorItem;
 
 use KiwiSuite\Application\ConfiguratorItem\ConfiguratorItemInterface;
-use KiwiSuite\CommandBus\Handler\HandlerInterface;
 use KiwiSuite\CommandBus\Handler\HandlerServiceManagerConfig;
 use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
 
@@ -14,7 +13,7 @@ final class HandlerConfiguratorItem implements ConfiguratorItemInterface
      */
     public function getConfigurator()
     {
-        return new ServiceManagerConfigurator();
+        return new ServiceManagerConfigurator(HandlerServiceManagerConfig::class);
     }
 
     /**
@@ -39,29 +38,6 @@ final class HandlerConfiguratorItem implements ConfiguratorItemInterface
      */
     public function getService($configurator): \Serializable
     {
-        $config = $configurator->getServiceManagerConfig();
-
-        $handlerMap = [];
-        foreach ($config->getFactories() as $id => $factory) {
-            if (!\class_exists($id)) {
-                throw new \InvalidArgumentException(\sprintf("'%s' can't load", $id));
-
-            }
-            if (!\is_subclass_of($id, HandlerInterface::class, true)) {
-                throw new \InvalidArgumentException(\sprintf("'%s' doesn't implement '%s'", $id, HandlerInterface::class));
-            }
-            $messageName = \forward_static_call([$id, 'getMessageName']);
-            $handlerMap[$messageName] = $id;
-        }
-
-        return new HandlerServiceManagerConfig(
-            $handlerMap,
-            $config->getFactories(),
-            $config->getSubManagers(),
-            $config->getDelegators(),
-            $config->getLazyServices(),
-            $config->getDisabledSharing(),
-            $config->getInitializers()
-        );
+        return $configurator->getServiceManagerConfig();
     }
 }

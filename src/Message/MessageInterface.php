@@ -1,6 +1,7 @@
 <?php
 namespace KiwiSuite\CommandBus\Message;
 
+use KiwiSuite\CommandBus\Message\Validation\Result;
 use KiwiSuite\CommonTypes\Entity\DateTimeType;
 use KiwiSuite\CommonTypes\Entity\UuidType;
 
@@ -17,25 +18,31 @@ interface MessageInterface extends \JsonSerializable
     public function createdAt(): DateTimeType;
 
     /**
-     * @return mixed
-     */
-    public function payload();
-
-    /**
-     * @return array
-     */
-    public function metadata(): array;
-
-    /**
+     * @param array $data
      * @param array $metadata
+     * @param UuidType|null $uuid
+     * @param DateTimeType|null $createdAt
      * @return MessageInterface
      */
-    public function withMetadata(array $metadata): MessageInterface;
+    public function inject(array $data, array $metadata, UuidType $uuid = null, DateTimeType $createdAt = null): MessageInterface;
 
     /**
-     * @param string $key
-     * @param $value
-     * @return self
+     * @return bool
      */
-    public function withAddedMetadata(string $key, $value): MessageInterface;
+    public function isInjected(): bool;
+
+    /**
+     * @return string
+     */
+    public static function getHandler(): string;
+
+    /**
+     * @return Result
+     */
+    public function validate(): Result;
+
+    /**
+     * @return bool
+     */
+    public function isValidated(): bool;
 }

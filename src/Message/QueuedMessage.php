@@ -1,42 +1,109 @@
 <?php
-
 namespace KiwiSuite\CommandBus\Message;
 
 use Bernard\Message;
+use KiwiSuite\CommandBus\Message\Validation\Result;
+use KiwiSuite\CommonTypes\Entity\DateTimeType;
+use KiwiSuite\CommonTypes\Entity\UuidType;
 
-/**
- * Indicates the command has been queued or not
- */
-final class QueuedMessage implements Message
+final class QueuedMessage implements Message, MessageInterface
 {
     /**
-     * @var Message
+     * @var MessageInterface
      */
     private $message;
 
     /**
-     * @param QueueableMessageInterface $message
+     * QueuedMessage constructor.
+     * @param MessageInterface $message
      */
-    public function __construct(QueueableMessageInterface $message)
+    public function __construct(MessageInterface $message)
     {
         $this->message = $message;
     }
 
     /**
-     * Returns the wrapped command
-     *
-     * @return Message
+     * @return MessageInterface
      */
-    public function getCommand()
+    public function getMessage(): MessageInterface
     {
-        return $this->message;
+        return $this->getMessage();
+    }
+
+    /**
+     * @return bool|string
+     */
+    public function getName()
+    {
+        $className = \get_class($this->message);
+        return substr($className, strrpos($className, '\\') + 1);
+    }
+
+    /**
+     * @return UuidType
+     */
+    public function uuid(): UuidType
+    {
+        return $this->message->uuid();
+    }
+
+    /**
+     * @return DateTimeType
+     */
+    public function createdAt(): DateTimeType
+    {
+        return $this->message->createdAt();
+    }
+
+    /**
+     * @param array $data
+     * @param array $metadata
+     * @param UuidType|null $uuid
+     * @param DateTimeType|null $createdAt
+     * @return MessageInterface
+     */
+    public function inject(array $data, array $metadata, UuidType $uuid = null, DateTimeType $createdAt = null): MessageInterface
+    {
+        //TODO Exception
+    }
+
+    /**
+     * @return bool
+     */
+    public function isInjected(): bool
+    {
+        return $this->message->isInjected();
     }
 
     /**
      * @return string
      */
-    public function getName()
+    public static function getHandler(): string
     {
-        return $this->message->getName();
+        //TODO Exception
+    }
+
+    /**
+     * @return Result
+     */
+    public function validate(): Result
+    {
+        return $this->message->validate();
+    }
+
+    /**
+     * @return bool
+     */
+    public function isValidated(): bool
+    {
+        return $this->message->isValidated();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function jsonSerialize()
+    {
+        return $this->message->jsonSerialize();
     }
 }

@@ -5,7 +5,5 @@ use KiwiSuite\CommandBus\Message\MessageInterface;
 
 interface HandlerInterface
 {
-    public static function getMessageName(): string;
-
     public function __invoke(MessageInterface $message);
 }

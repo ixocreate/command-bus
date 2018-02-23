@@ -8,12 +8,15 @@ use KiwiSuite\Application\Service\ServiceRegistry;
 use KiwiSuite\ApplicationConsole\ConfiguratorItem\ConsoleConfiguratorItem;
 use KiwiSuite\CommandBus\CommandBus;
 use KiwiSuite\CommandBus\ConfiguratorItem\HandlerConfiguratorItem;
+use KiwiSuite\CommandBus\ConfiguratorItem\MessageConfiguratorItem;
 use KiwiSuite\CommandBus\Console\ConsumeCommand;
 use KiwiSuite\CommandBus\Consumer\Consumer;
 use KiwiSuite\CommandBus\Consumer\Factory\ConsumerFactory;
 use KiwiSuite\CommandBus\Factory\CommandBusFactory;
 use KiwiSuite\CommandBus\Handler\Factory\HandlerSubManagerFactory;
 use KiwiSuite\CommandBus\Handler\HandlerSubManager;
+use KiwiSuite\CommandBus\Message\Factory\MessageSubManagerFactory;
+use KiwiSuite\CommandBus\Message\MessageSubManager;
 use KiwiSuite\CommandBus\QueueFactory\PersistentFactory;
 use KiwiSuite\ServiceManager\ServiceManager;
 use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
@@ -30,6 +33,7 @@ final class CommandBusBootstrap implements BootstrapInterface
         $serviceManagerConfigurator = $configuratorRegistry->get(ServiceManagerConfiguratorItem::class);
 
         $serviceManagerConfigurator->addSubManager(HandlerSubManager::class, HandlerSubManagerFactory::class);
+        $serviceManagerConfigurator->addSubManager(MessageSubManager::class, MessageSubManagerFactory::class);
         $serviceManagerConfigurator->addFactory(CommandBus::class, CommandBusFactory::class);
         $serviceManagerConfigurator->addFactory(PersistentFactory::class, \KiwiSuite\CommandBus\QueueFactory\Factory\PersistentFactory::class);
         $serviceManagerConfigurator->addFactory(Consumer::class, ConsumerFactory::class);
@@ -55,6 +59,7 @@ final class CommandBusBootstrap implements BootstrapInterface
     {
         return [
             HandlerConfiguratorItem::class,
+            MessageConfiguratorItem::class,
         ];
     }
 

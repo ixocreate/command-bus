@@ -1,6 +1,7 @@
 <?php
 namespace KiwiSuite\CommandBus;
 
+use KiwiSuite\CommandBus\Message\MessageInterface;
 use League\Tactician\CommandBus as Tactician;
 
 final class CommandBus
@@ -10,18 +11,31 @@ final class CommandBus
      */
     private $commandBus;
 
+    /**
+     * CommandBus constructor.
+     * @param array $middlewares
+     */
     public function __construct(array $middlewares)
     {
         $this->commandBus = new Tactician($middlewares);
     }
 
-    public function handle($command)
+    /**
+     * @param MessageInterface $command
+     * @return $this
+     */
+    public function handle(MessageInterface $command)
     {
         $this->commandBus->handle($command);
+
+        return $this;
     }
 
-    public function __invoke($command)
+    /**
+     * @param MessageInterface $command
+     */
+    public function __invoke(MessageInterface $command)
     {
-        return $this->handle($command);
+        $this->handle($command);
     }
 }

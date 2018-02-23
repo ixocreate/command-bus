@@ -4,8 +4,9 @@ namespace KiwiSuite\CommandBus\QueueFactory\Factory;
 use Bernard\Driver\DoctrineDriver;
 use Bernard\Normalizer\EnvelopeNormalizer;
 use Bernard\Serializer;
-use KiwiSuite\CommandBus\Message\MessageNormalizer;
-use KiwiSuite\CommandBus\Message\QueueMessageNormalizer;
+use KiwiSuite\CommandBus\Message\MessageSubManager;
+use KiwiSuite\CommandBus\Message\Normalizer\MessageNormalizer;
+use KiwiSuite\CommandBus\Message\Normalizer\QueuedMessageNormalizer;
 use KiwiSuite\Database\Connection\Factory\ConnectionSubManager;
 use KiwiSuite\ServiceManager\FactoryInterface;
 use KiwiSuite\ServiceManager\ServiceManagerInterface;
@@ -26,8 +27,8 @@ final class PersistentFactory implements FactoryInterface
     {
         $aggregateNormalizer = new AggregateNormalizer([
             new EnvelopeNormalizer(),
-            new QueueMessageNormalizer(),
-            new MessageNormalizer()
+            new QueuedMessageNormalizer(),
+            new MessageNormalizer($container->get(MessageSubManager::class))
         ]);
 
         return new \KiwiSuite\CommandBus\QueueFactory\PersistentFactory(
