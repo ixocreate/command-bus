@@ -16,8 +16,19 @@ final class Result
         return (count($this->errors) === 0);
     }
 
-    public function addError():void
+    /**
+     * @param $error
+     */
+    public function addError($error): void
     {
+        $this->errors[] = $error;
+    }
 
+    /**
+     * @return array
+     */
+    public function getErrors(): array
+    {
+        return $this->errors;
     }
 }
