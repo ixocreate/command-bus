@@ -124,6 +124,22 @@ trait MessageTrait
         return $this->createdAt;
     }
 
+    /**
+     * @return array
+     */
+    public function data(): array
+    {
+        return $this->data;
+    }
+
+    /**
+     * @return array
+     */
+    public function metadata(): array
+    {
+        return $this->metadata;
+    }
+
     public function jsonSerialize()
     {
         return [
