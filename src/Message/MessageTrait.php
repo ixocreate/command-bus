@@ -29,10 +29,6 @@ trait MessageTrait
      */
     private $createdAt;
 
-    /**
-     * @var bool
-     */
-    private $isValidated = false;
 
     /**
      * @param array $data
@@ -43,6 +39,10 @@ trait MessageTrait
      */
     public function inject(array $data, array $metadata = [], UuidType $uuid = null, DateTimeType $createdAt = null): MessageInterface
     {
+        if ($this->isInjected()) {
+            //TODO Exception
+        }
+
         $message = clone $this;
 
         $message->data = $data;
@@ -82,23 +82,21 @@ trait MessageTrait
 
         $this->doValidate($result);
 
-        $this->isValidated = true;
-
         return $result;
+    }
+
+    public function __clone()
+    {
+        $this->data = null;
+        $this->metadata = null;
+        $this->uuid = null;
+        $this->createdAt = null;
     }
 
     /**
      * @param Result $result
      */
     abstract protected function doValidate(Result $result): void;
-
-    /**
-     * @return bool
-     */
-    public function isValidated(): bool
-    {
-        return $this->isValidated;
-    }
 
     /**
      * @return UuidType

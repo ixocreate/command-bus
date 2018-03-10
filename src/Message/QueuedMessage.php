@@ -92,14 +92,6 @@ final class QueuedMessage implements Message, MessageInterface
     }
 
     /**
-     * @return bool
-     */
-    public function isValidated(): bool
-    {
-        return $this->message->isValidated();
-    }
-
-    /**
      * @return mixed
      */
     public function jsonSerialize()

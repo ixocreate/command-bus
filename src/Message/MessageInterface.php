@@ -18,6 +18,16 @@ interface MessageInterface extends \JsonSerializable
     public function createdAt(): DateTimeType;
 
     /**
+     * @return array
+     */
+    public function data(): array;
+
+    /**
+     * @return array
+     */
+    public function metadata(): array;
+
+    /**
      * @param array $data
      * @param array $metadata
      * @param UuidType|null $uuid
@@ -32,17 +42,12 @@ interface MessageInterface extends \JsonSerializable
     public function isInjected(): bool;
 
     /**
-     * @return string
+     * @return array
      */
-    public static function getHandler(): string;
+    public function handlers(): array;
 
     /**
      * @return Result
      */
     public function validate(): Result;
-
-    /**
-     * @return bool
-     */
-    public function isValidated(): bool;
 }
