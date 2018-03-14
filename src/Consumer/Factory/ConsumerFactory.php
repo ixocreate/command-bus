@@ -2,12 +2,11 @@
 namespace KiwiSuite\CommandBus\Consumer\Factory;
 
 use Bernard\Router\ClassNameRouter;
-use Bernard\Router\SimpleRouter;
 use KiwiSuite\CommandBus\CommandBus;
 use KiwiSuite\CommandBus\Consumer\Consumer;
 use KiwiSuite\CommandBus\Message\QueuedMessage;
-use KiwiSuite\ServiceManager\FactoryInterface;
-use KiwiSuite\ServiceManager\ServiceManagerInterface;
+use KiwiSuite\Contract\ServiceManager\FactoryInterface;
+use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
 final class ConsumerFactory implements FactoryInterface

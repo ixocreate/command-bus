@@ -4,9 +4,9 @@ namespace KiwiSuite\CommandBus\Message\Factory;
 use KiwiSuite\CommandBus\Message\MessageInterface;
 use KiwiSuite\CommandBus\Message\MessageServiceManagerConfig;
 use KiwiSuite\CommandBus\Message\MessageSubManager;
-use KiwiSuite\ServiceManager\ServiceManagerInterface;
-use KiwiSuite\ServiceManager\SubManager\SubManagerFactoryInterface;
-use KiwiSuite\ServiceManager\SubManager\SubManagerInterface;
+use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
+use KiwiSuite\Contract\ServiceManager\SubManager\SubManagerFactoryInterface;
+use KiwiSuite\Contract\ServiceManager\SubManager\SubManagerInterface;
 
 final class MessageSubManagerFactory implements SubManagerFactoryInterface
 {

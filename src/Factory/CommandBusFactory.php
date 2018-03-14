@@ -5,8 +5,8 @@ use KiwiSuite\CommandBus\CommandBus;
 use KiwiSuite\CommandBus\Handler\HandlerSubManager;
 use KiwiSuite\CommandBus\Plugin\HandlerPipePlugin;
 use KiwiSuite\CommandBus\Plugin\TransformPlugin;
-use KiwiSuite\ServiceManager\FactoryInterface;
-use KiwiSuite\ServiceManager\ServiceManagerInterface;
+use KiwiSuite\Contract\ServiceManager\FactoryInterface;
+use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
 
 final class CommandBusFactory implements FactoryInterface
 {

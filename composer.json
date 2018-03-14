@@ -12,6 +12,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.1",
+        "kiwi-suite/contract": "dev-develop",
         "league/tactician": "^1.0",
         "league/tactician-container": "^2.0",
         "kiwi-suite/entity": "dev-develop",

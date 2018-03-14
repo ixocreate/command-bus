@@ -4,9 +4,9 @@ namespace KiwiSuite\CommandBus\Handler\Factory;
 use KiwiSuite\CommandBus\Handler\HandlerInterface;
 use KiwiSuite\CommandBus\Handler\HandlerServiceManagerConfig;
 use KiwiSuite\CommandBus\Handler\HandlerSubManager;
-use KiwiSuite\ServiceManager\ServiceManagerInterface;
-use KiwiSuite\ServiceManager\SubManager\SubManagerFactoryInterface;
-use KiwiSuite\ServiceManager\SubManager\SubManagerInterface;
+use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
+use KiwiSuite\Contract\ServiceManager\SubManager\SubManagerFactoryInterface;
+use KiwiSuite\Contract\ServiceManager\SubManager\SubManagerInterface;
 
 final class HandlerSubManagerFactory implements SubManagerFactoryInterface
 {

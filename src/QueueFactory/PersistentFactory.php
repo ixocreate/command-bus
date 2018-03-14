@@ -1,7 +1,7 @@
 <?php
 namespace KiwiSuite\CommandBus\QueueFactory;
 
-final class  PersistentFactory extends \Bernard\QueueFactory\PersistentFactory
+final class PersistentFactory extends \Bernard\QueueFactory\PersistentFactory
 {
 
 }

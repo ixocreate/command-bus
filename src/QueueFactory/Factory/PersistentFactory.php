@@ -7,9 +7,9 @@ use Bernard\Serializer;
 use KiwiSuite\CommandBus\Message\MessageSubManager;
 use KiwiSuite\CommandBus\Message\Normalizer\MessageNormalizer;
 use KiwiSuite\CommandBus\Message\Normalizer\QueuedMessageNormalizer;
+use KiwiSuite\Contract\ServiceManager\FactoryInterface;
+use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
 use KiwiSuite\Database\Connection\Factory\ConnectionSubManager;
-use KiwiSuite\ServiceManager\FactoryInterface;
-use KiwiSuite\ServiceManager\ServiceManagerInterface;
 use Normalt\Normalizer\AggregateNormalizer;
 
 final class PersistentFactory implements FactoryInterface
