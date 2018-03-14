@@ -1,4 +1,14 @@
 <?php
+/**
+ * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
+ *
+ * @package kiwi-suite/command-bus
+ * @see https://github.com/kiwi-suite/command-bus
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
 namespace KiwiSuite\CommandBus\Bootstrap;
 
 use KiwiSuite\Application\Bootstrap\BootstrapInterface;
@@ -49,7 +59,6 @@ final class CommandBusBootstrap implements BootstrapInterface
      */
     public function addServices(ServiceRegistry $serviceRegistry): void
     {
-
     }
 
     /**
@@ -76,6 +85,5 @@ final class CommandBusBootstrap implements BootstrapInterface
      */
     public function boot(ServiceManager $serviceManager): void
     {
-
     }
 }

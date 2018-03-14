@@ -1,4 +1,14 @@
 <?php
+/**
+ * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
+ *
+ * @package kiwi-suite/command-bus
+ * @see https://github.com/kiwi-suite/command-bus
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
 namespace KiwiSuite\CommandBus\Message\Normalizer;
 
 use Assert\Assertion;
@@ -12,7 +22,7 @@ final class QueuedMessageNormalizer extends AbstractAggregateNormalizerAware imp
     public function normalize($object, $format = null, array $context = [])
     {
         return [
-            'class' => get_class($object->getMessage()),
+            'class' => \get_class($object->getMessage()),
             'name' => $object->getName(),
             'data' => $this->aggregate->normalize($object->getMessage()),
         ];

@@ -1,4 +1,14 @@
 <?php
+/**
+ * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
+ *
+ * @package kiwi-suite/command-bus
+ * @see https://github.com/kiwi-suite/command-bus
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
 namespace KiwiSuite\CommandBus\Message\Normalizer;
 
 use KiwiSuite\CommandBus\Message\MessageInterface;
@@ -54,7 +64,7 @@ final class MessageNormalizer implements NormalizerInterface, DenormalizerInterf
      */
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return (!empty($data['className']) && class_exists($data['className']) && in_array(MessageInterface::class, class_implements($data['className'])));
+        return !empty($data['className']) && \class_exists($data['className']) && \in_array(MessageInterface::class, \class_implements($data['className']));
     }
 
     /**
@@ -75,6 +85,6 @@ final class MessageNormalizer implements NormalizerInterface, DenormalizerInterf
      */
     public function supportsNormalization($data, $format = null)
     {
-        return ($data instanceof MessageInterface);
+        return $data instanceof MessageInterface;
     }
 }

@@ -1,4 +1,14 @@
 <?php
+/**
+ * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
+ *
+ * @package kiwi-suite/command-bus
+ * @see https://github.com/kiwi-suite/command-bus
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
 namespace KiwiSuite\CommandBus\Message;
 
 use KiwiSuite\CommandBus\Message\Validation\Result;
@@ -66,7 +76,7 @@ trait MessageTrait
      */
     public function isInjected(): bool
     {
-        return (($this->data !== null) && ($this->uuid instanceof UuidType) && ($this->createdAt instanceof DateTimeType));
+        return ($this->data !== null) && ($this->uuid instanceof UuidType) && ($this->createdAt instanceof DateTimeType);
     }
 
     /**
@@ -145,8 +155,7 @@ trait MessageTrait
             'data' => $this->data,
             'metadata' => $this->metadata,
             'uuid' => $this->uuid()->getValue(),
-            'createdAt' => $this->createdAt()->getValue()->getTimestamp()
+            'createdAt' => $this->createdAt()->getValue()->getTimestamp(),
         ];
     }
 }
-

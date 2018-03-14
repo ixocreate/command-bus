@@ -1,5 +1,14 @@
 <?php
+/**
+ * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
+ *
+ * @package kiwi-suite/command-bus
+ * @see https://github.com/kiwi-suite/command-bus
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
 
+declare(strict_types=1);
 namespace KiwiSuite\CommandBus\Console;
 
 use Bernard\Queue;
@@ -61,13 +70,13 @@ class ConsumeCommand extends Command implements CommandInterface
      */
     protected function getQueue($queue)
     {
-        if (count($queue) > 1) {
-            $queues = array_map([$this->queues, 'create'], $queue);
+        if (\count($queue) > 1) {
+            $queues = \array_map([$this->queues, 'create'], $queue);
 
             return new RoundRobinQueue($queues);
         }
 
-        if (is_array($queue)) {
+        if (\is_array($queue)) {
             $queue = $queue[0];
         }
 

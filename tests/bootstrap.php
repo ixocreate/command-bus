@@ -9,10 +9,5 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus\Message;
-
-use KiwiSuite\ServiceManager\ServiceManagerConfig;
-
-final class MessageServiceManagerConfig extends ServiceManagerConfig
-{
-}
+\chdir(\dirname(__DIR__));
+include 'vendor/autoload.php';

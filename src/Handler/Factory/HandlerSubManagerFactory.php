@@ -1,4 +1,14 @@
 <?php
+/**
+ * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
+ *
+ * @package kiwi-suite/command-bus
+ * @see https://github.com/kiwi-suite/command-bus
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
 namespace KiwiSuite\CommandBus\Handler\Factory;
 
 use KiwiSuite\CommandBus\Handler\HandlerInterface;
@@ -15,9 +25,9 @@ final class HandlerSubManagerFactory implements SubManagerFactoryInterface
      * @param ServiceManagerInterface $container
      * @param $requestedName
      * @param array|null $options
-     * @return SubManagerInterface
      * @throws \Psr\Container\ContainerExceptionInterface
      * @throws \Psr\Container\NotFoundExceptionInterface
+     * @return SubManagerInterface
      */
     public function __invoke(ServiceManagerInterface $container, $requestedName, array $options = null): SubManagerInterface
     {

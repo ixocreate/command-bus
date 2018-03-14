@@ -1,4 +1,14 @@
 <?php
+/**
+ * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
+ *
+ * @package kiwi-suite/command-bus
+ * @see https://github.com/kiwi-suite/command-bus
+ * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @license MIT License
+ */
+
+declare(strict_types=1);
 namespace KiwiSuite\CommandBus\Message;
 
 use Bernard\Message;
@@ -36,7 +46,7 @@ final class QueuedMessage implements Message, MessageInterface
     public function getName()
     {
         $className = \get_class($this->message);
-        return substr($className, strrpos($className, '\\') + 1);
+        return \mb_substr($className, \mb_strrpos($className, '\\') + 1);
     }
 
     /**
