@@ -13,9 +13,9 @@ namespace KiwiSuite\CommandBus\Console;
 
 use Bernard\Queue;
 use Bernard\Queue\RoundRobinQueue;
-use KiwiSuite\ApplicationConsole\Command\CommandInterface;
 use KiwiSuite\CommandBus\Consumer\Consumer;
 use KiwiSuite\CommandBus\QueueFactory\PersistentFactory;
+use KiwiSuite\Contract\Command\CommandInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
