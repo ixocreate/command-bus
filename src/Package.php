@@ -3,7 +3,7 @@
  * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
  *
  * @package kiwi-suite/command-bus
- * @see https://github.com/kiwi-suite/command-bus
+ * @link https://github.com/kiwi-suite/command-bus
  * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
  * @license MIT License
  */
@@ -12,8 +12,7 @@ declare(strict_types=1);
 
 namespace KiwiSuite\CommandBus;
 
-use KiwiSuite\CommandBus\BootstrapItem\HandlerBootstrapItem;
-use KiwiSuite\CommandBus\BootstrapItem\MessageBootstrapItem;
+use KiwiSuite\CommandBus\BootstrapItem\BootstrapItem;
 use KiwiSuite\Contract\Application\ConfiguratorRegistryInterface;
 use KiwiSuite\Contract\Application\PackageInterface;
 use KiwiSuite\Contract\Application\ServiceRegistryInterface;
@@ -42,8 +41,7 @@ final class Package implements PackageInterface
     public function getBootstrapItems(): ?array
     {
         return [
-            HandlerBootstrapItem::class,
-            MessageBootstrapItem::class,
+            BootstrapItem::class,
         ];
     }
 

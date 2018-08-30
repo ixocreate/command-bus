@@ -3,7 +3,7 @@
  * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
  *
  * @package kiwi-suite/command-bus
- * @see https://github.com/kiwi-suite/command-bus
+ * @link https://github.com/kiwi-suite/command-bus
  * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
  * @license MIT License
  */
@@ -11,41 +11,90 @@
 declare(strict_types=1);
 namespace KiwiSuite\CommandBus;
 
-use KiwiSuite\CommandBus\Message\MessageInterface;
-use League\Tactician\CommandBus as Tactician;
+use KiwiSuite\CommandBus\Next\Next;
+use KiwiSuite\Contract\CommandBus\CommandInterface;
+use KiwiSuite\Contract\CommandBus\DispatchInterface;
+use KiwiSuite\Contract\CommandBus\ResultInterface;
+use Psr\Container\ContainerInterface;
 
-final class CommandBus
+final class CommandBus implements DispatchInterface
 {
     /**
-     * @var Tactician
+     * @var Config
      */
-    private $commandBus;
+    private $config;
+
+    /**
+     * @var ContainerInterface
+     */
+    private $handlerContainer;
+
+    /**
+     * @var ContainerInterface
+     */
+    private $commandContainer;
+
 
     /**
      * CommandBus constructor.
-     * @param array $middlewares
+     * @param Config $config
+     * @param ContainerInterface $handlerContainer
+     * @param ContainerInterface $commandContainer
      */
-    public function __construct(array $middlewares)
+    public function __construct(Config $config, ContainerInterface $handlerContainer, ContainerInterface $commandContainer)
     {
-        $this->commandBus = new Tactician($middlewares);
+        $this->config = $config;
+        $this->handlerContainer = $handlerContainer;
+        $this->commandContainer = $commandContainer;
     }
 
     /**
-     * @param MessageInterface $command
-     * @return $this
+     * @param string $name
+     * @param array $data
+     * @param null|string $uuid
+     * @param \DateTimeInterface|null $createdAt
+     * @return CommandInterface
      */
-    public function handle(MessageInterface $command)
+    public function create(string $name, array $data, ?string $uuid = null, ?\DateTimeInterface $createdAt = null): CommandInterface
     {
-        $this->commandBus->handle($command);
+        /** @var CommandInterface $command */
+        $command = $this->commandContainer->get($name)->withData($data);
 
-        return $this;
+        if ($uuid !== null) {
+            $command = $command->withUuid($uuid);
+        }
+
+        if ($createdAt !== null) {
+            $command = $command->withCreatedAt($createdAt);
+        }
+
+        return $command;
     }
 
     /**
-     * @param MessageInterface $command
+     * @param string $name
+     * @param array $data
+     * @param null|string $uuid
+     * @param \DateTimeInterface|null $createdAt
+     * @return ResultInterface
      */
-    public function __invoke(MessageInterface $command)
+    public function command(string $name, array $data, ?string $uuid = null, ?\DateTimeInterface $createdAt = null): ResultInterface
     {
-        $this->handle($command);
+        return $this->dispatch($this->create($name, $data, $uuid, $createdAt));
+    }
+
+    /**
+     * @param CommandInterface $command
+     * @return ResultInterface
+     */
+    public function dispatch(CommandInterface $command): ResultInterface
+    {
+        $queue = new \SplQueue();
+        foreach ($this->config->handlers() as $item) {
+            $queue->enqueue($item);
+        }
+
+        $next = new Next($queue, $this->handlerContainer);
+        return $next->dispatch($command);
     }
 }

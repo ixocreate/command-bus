@@ -3,7 +3,7 @@
  * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
  *
  * @package kiwi-suite/command-bus
- * @see https://github.com/kiwi-suite/command-bus
+ * @link https://github.com/kiwi-suite/command-bus
  * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
  * @license MIT License
  */

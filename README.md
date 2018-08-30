@@ -18,4 +18,4 @@ php composer.phar require kiwi-suite/command-bus
 
 ## License
 
-kiwi-suite/framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) - see the `LICENSE` file for details
+kiwi-suite/command-bus is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) - see the `LICENSE` file for details

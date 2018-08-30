@@ -1,8 +1,8 @@
 {
     "name": "kiwi-suite/command-bus",
     "description": "kiwi-suite/command-bus",
-    "license": "proprietary",
-    "type": "project",
+    "license": "MIT",
+    "type": "library",
     "authors": [
         {
             "name": "Thomas Payer"
@@ -13,19 +13,15 @@
     "require": {
         "php": "^7.1",
         "kiwi-suite/contract": "dev-develop",
-        "league/tactician": "^1.0",
-        "league/tactician-container": "^2.0",
-        "kiwi-suite/entity": "dev-develop",
-        "kiwi-suite/common-types": "dev-develop",
-        "bernard/bernard": "^1.0@dev"
+        "ramsey/uuid": "^3.8",
+        "symfony/options-resolver": "^4.1",
+        "zendframework/zend-stdlib": "^3.2"
     },
     "require-dev": {
-        "kiwi-suite/application": "dev-develop",
-        "kiwi-suite/database": "dev-develop",
-        "kiwi-suite/application-console": "dev-develop",
         "kiwi-suite/servicemanager": "dev-develop",
         "friendsofphp/php-cs-fixer": "^2.5",
-        "phpunit/phpunit": "^6.0.6"
+        "phpunit/phpunit": "^6.0.6",
+        "php-coveralls/php-coveralls": "^2.1"
     },
     "autoload": {
         "psr-4": {
