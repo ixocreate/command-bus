@@ -67,7 +67,7 @@ final class Result implements ResultInterface
     }
 
     /**
-     * @return array
+     * @inheritdoc
      */
     public function messages(): array
     {
