@@ -86,4 +86,16 @@ class AbstractCommandTest extends TestCase
     {
         $this->assertSame([], $this->command->data());
     }
+
+    /**
+     * @covers \KiwiSuite\CommandBus\Command\AbstractCommand::dataValue
+     */
+    public function testDataValue()
+    {
+        $command = $this->command->withData(['test' => 'test', 'abc' => 'xyz']);
+
+        $this->assertSame(null, $command->dataValue('nothing'));
+        $this->assertSame('something', $command->dataValue('nothing', 'something'));
+        $this->assertSame('xyz', $command->dataValue('abc'));
+    }
 }
