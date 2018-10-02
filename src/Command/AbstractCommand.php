@@ -111,7 +111,7 @@ abstract class AbstractCommand implements CommandInterface
 
     public function dataValue(string $name, $default = null)
     {
-        if (array_key_exists($name, $this->data())) {
+        if (\array_key_exists($name, $this->data())) {
             return $this->data()[$name];
         }
 
