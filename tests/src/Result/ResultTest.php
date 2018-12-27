@@ -9,21 +9,21 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus\Result;
+namespace IxocreateTest\CommandBus\Result;
 
-use KiwiSuite\CommandBus\Result\Result;
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Result\Result;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\ResultInterface;
 use PHPUnit\Framework\TestCase;
 
 class ResultTest extends TestCase
 {
     /**
-     * @covers \KiwiSuite\CommandBus\Result\Result::command
-     * @covers \KiwiSuite\CommandBus\Result\Result::isSuccessful
-     * @covers \KiwiSuite\CommandBus\Result\Result::status
-     * @covers \KiwiSuite\CommandBus\Result\Result::messages
-     * @covers \KiwiSuite\CommandBus\Result\Result::__construct
+     * @covers \Ixocreate\CommandBus\Result\Result::command
+     * @covers \Ixocreate\CommandBus\Result\Result::isSuccessful
+     * @covers \Ixocreate\CommandBus\Result\Result::status
+     * @covers \Ixocreate\CommandBus\Result\Result::messages
+     * @covers \Ixocreate\CommandBus\Result\Result::__construct
      */
     public function testResult()
     {

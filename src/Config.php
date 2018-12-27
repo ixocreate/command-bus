@@ -9,9 +9,9 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus;
+namespace Ixocreate\CommandBus;
 
-use KiwiSuite\Contract\Application\SerializableServiceInterface;
+use Ixocreate\Contract\Application\SerializableServiceInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 final class Config implements SerializableServiceInterface

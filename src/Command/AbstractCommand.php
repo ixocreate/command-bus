@@ -9,9 +9,9 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus\Command;
+namespace Ixocreate\CommandBus\Command;
 
-use KiwiSuite\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\CommandInterface;
 use Ramsey\Uuid\Uuid;
 
 abstract class AbstractCommand implements CommandInterface

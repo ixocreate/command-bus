@@ -9,17 +9,17 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus\Handler;
+namespace IxocreateTest\CommandBus\Handler;
 
-use KiwiSuite\CommandBus\Handler\ExecutionHandler;
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\DispatchInterface;
+use Ixocreate\CommandBus\Handler\ExecutionHandler;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\DispatchInterface;
 use PHPUnit\Framework\TestCase;
 
 class ExecutionHandlerTest extends TestCase
 {
     /**
-     * @covers \KiwiSuite\CommandBus\Handler\ExecutionHandler::handle
+     * @covers \Ixocreate\CommandBus\Handler\ExecutionHandler::handle
      */
     public function testHandle()
     {

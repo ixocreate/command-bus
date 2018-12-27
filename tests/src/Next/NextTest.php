@@ -9,13 +9,13 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus\Next;
+namespace IxocreateTest\CommandBus\Next;
 
-use KiwiSuite\CommandBus\Next\Next;
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\DispatchInterface;
-use KiwiSuite\Contract\CommandBus\HandlerInterface;
-use KiwiSuite\Contract\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Next\Next;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\DispatchInterface;
+use Ixocreate\Contract\CommandBus\HandlerInterface;
+use Ixocreate\Contract\CommandBus\ResultInterface;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
@@ -48,8 +48,8 @@ class NextTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\Next\Next::dispatch
-     * @covers \KiwiSuite\CommandBus\Next\Next::__construct
+     * @covers \Ixocreate\CommandBus\Next\Next::dispatch
+     * @covers \Ixocreate\CommandBus\Next\Next::__construct
      */
     public function testEmptyQueue()
     {
@@ -62,8 +62,8 @@ class NextTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\Next\Next::dispatch
-     * @covers \KiwiSuite\CommandBus\Next\Next::__construct
+     * @covers \Ixocreate\CommandBus\Next\Next::dispatch
+     * @covers \Ixocreate\CommandBus\Next\Next::__construct
      */
     public function testPipeline()
     {

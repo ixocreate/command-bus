@@ -9,15 +9,15 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus;
+namespace Ixocreate\CommandBus;
 
-use KiwiSuite\CommandBus\Command\CommandSubManager;
-use KiwiSuite\CommandBus\Handler\HandlerSubManager;
-use KiwiSuite\Contract\Application\ConfiguratorInterface;
-use KiwiSuite\Contract\Application\ServiceRegistryInterface;
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\HandlerInterface;
-use KiwiSuite\ServiceManager\SubManager\SubManagerConfigurator;
+use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Handler\HandlerSubManager;
+use Ixocreate\Contract\Application\ConfiguratorInterface;
+use Ixocreate\Contract\Application\ServiceRegistryInterface;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\HandlerInterface;
+use Ixocreate\ServiceManager\SubManager\SubManagerConfigurator;
 use Zend\Stdlib\PriorityList;
 
 final class Configurator implements ConfiguratorInterface

@@ -9,13 +9,13 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus;
+namespace IxocreateTest\CommandBus;
 
-use KiwiSuite\CommandBus\BootstrapItem\BootstrapItem;
-use KiwiSuite\Contract\Application\ConfiguratorRegistryInterface;
-use KiwiSuite\Contract\Application\ServiceRegistryInterface;
-use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
-use KiwiSuite\CommandBus\Package;
+use Ixocreate\CommandBus\BootstrapItem\BootstrapItem;
+use Ixocreate\Contract\Application\ConfiguratorRegistryInterface;
+use Ixocreate\Contract\Application\ServiceRegistryInterface;
+use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
+use Ixocreate\CommandBus\Package;
 use PHPUnit\Framework\TestCase;
 
 class PackageTest extends TestCase

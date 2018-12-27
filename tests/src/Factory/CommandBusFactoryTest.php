@@ -9,19 +9,19 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus\Factory;
+namespace IxocreateTest\CommandBus\Factory;
 
-use KiwiSuite\CommandBus\CommandBus;
-use KiwiSuite\CommandBus\Config;
-use KiwiSuite\CommandBus\Factory\CommandBusFactory;
-use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
+use Ixocreate\CommandBus\CommandBus;
+use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\Factory\CommandBusFactory;
+use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 
 final class CommandBusFactoryTest extends TestCase
 {
     /**
-     * @covers \KiwiSuite\CommandBus\Factory\CommandBusFactory::__invoke
+     * @covers \Ixocreate\CommandBus\Factory\CommandBusFactory::__invoke
      */
     public function testFactory()
     {

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus;
+namespace Ixocreate\CommandBus;
 
-use KiwiSuite\CommandBus\Command\CommandSubManager;
-use KiwiSuite\CommandBus\Factory\CommandBusFactory;
-use KiwiSuite\CommandBus\Handler\HandlerSubManager;
-use KiwiSuite\ServiceManager\ServiceManagerConfigurator;
+use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Factory\CommandBusFactory;
+use Ixocreate\CommandBus\Handler\HandlerSubManager;
+use Ixocreate\ServiceManager\ServiceManagerConfigurator;
 
 /** @var ServiceManagerConfigurator $serviceManager */
 $serviceManager->addFactory(CommandBus::class, CommandBusFactory::class);

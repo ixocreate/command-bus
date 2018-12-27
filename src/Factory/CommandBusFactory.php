@@ -9,14 +9,14 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus\Factory;
+namespace Ixocreate\CommandBus\Factory;
 
-use KiwiSuite\CommandBus\Command\CommandSubManager;
-use KiwiSuite\CommandBus\CommandBus;
-use KiwiSuite\CommandBus\Config;
-use KiwiSuite\CommandBus\Handler\HandlerSubManager;
-use KiwiSuite\Contract\ServiceManager\FactoryInterface;
-use KiwiSuite\Contract\ServiceManager\ServiceManagerInterface;
+use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\CommandBus;
+use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\Handler\HandlerSubManager;
+use Ixocreate\Contract\ServiceManager\FactoryInterface;
+use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
 
 final class CommandBusFactory implements FactoryInterface
 {

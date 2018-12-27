@@ -9,20 +9,20 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus;
+namespace IxocreateTest\CommandBus;
 
-use KiwiSuite\CommandBus\Command\CommandSubManager;
-use KiwiSuite\CommandBus\Config;
-use KiwiSuite\CommandBus\Configurator;
-use KiwiSuite\CommandBus\Handler\HandlerSubManager;
-use KiwiSuite\Contract\Application\ServiceRegistryInterface;
-use KiwiSuite\ServiceManager\ServiceManagerConfig;
+use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\Configurator;
+use Ixocreate\CommandBus\Handler\HandlerSubManager;
+use Ixocreate\Contract\Application\ServiceRegistryInterface;
+use Ixocreate\ServiceManager\ServiceManagerConfig;
 use PHPUnit\Framework\TestCase;
 
 class ConfiguratorTest extends TestCase
 {
     /**
-     * @covers \KiwiSuite\CommandBus\Configurator
+     * @covers \Ixocreate\CommandBus\Configurator
      */
     public function testConfigurator()
     {

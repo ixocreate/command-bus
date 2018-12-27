@@ -9,13 +9,13 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus\Handler;
+namespace Ixocreate\CommandBus\Handler;
 
-use KiwiSuite\CommandBus\Result\Result;
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\DispatchInterface;
-use KiwiSuite\Contract\CommandBus\HandlerInterface;
-use KiwiSuite\Contract\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Result\Result;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\DispatchInterface;
+use Ixocreate\Contract\CommandBus\HandlerInterface;
+use Ixocreate\Contract\CommandBus\ResultInterface;
 
 final class ExecutionHandler implements HandlerInterface
 {

@@ -9,14 +9,14 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus;
+namespace IxocreateTest\CommandBus;
 
-use KiwiSuite\CommandBus\CommandBus;
-use KiwiSuite\CommandBus\Config;
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\DispatchInterface;
-use KiwiSuite\Contract\CommandBus\HandlerInterface;
-use KiwiSuite\Contract\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\CommandBus;
+use Ixocreate\CommandBus\Config;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\DispatchInterface;
+use Ixocreate\Contract\CommandBus\HandlerInterface;
+use Ixocreate\Contract\CommandBus\ResultInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Ramsey\Uuid\Uuid;
@@ -57,8 +57,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\CommandBus::create
-     * @covers \KiwiSuite\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\CommandBus::create
+     * @covers \Ixocreate\CommandBus\CommandBus::__construct
      */
     public function testCreateWithoutDefault()
     {
@@ -73,8 +73,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\CommandBus::create
-     * @covers \KiwiSuite\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\CommandBus::create
+     * @covers \Ixocreate\CommandBus\CommandBus::__construct
      */
     public function testCreateWithDefault()
     {
@@ -89,8 +89,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\CommandBus::dispatch
-     * @covers \KiwiSuite\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\CommandBus::dispatch
+     * @covers \Ixocreate\CommandBus\CommandBus::__construct
      */
     public function testDispatch()
     {
@@ -102,8 +102,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\CommandBus::command
-     * @covers \KiwiSuite\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\CommandBus::command
+     * @covers \Ixocreate\CommandBus\CommandBus::__construct
      */
     public function testCommandWithoutDefault()
     {
@@ -118,8 +118,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\CommandBus::command
-     * @covers \KiwiSuite\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\CommandBus::command
+     * @covers \Ixocreate\CommandBus\CommandBus::__construct
      */
     public function testCommandWithDefault()
     {

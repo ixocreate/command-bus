@@ -9,12 +9,12 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus;
+namespace Ixocreate\CommandBus;
 
-use KiwiSuite\CommandBus\Next\Next;
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\DispatchInterface;
-use KiwiSuite\Contract\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Next\Next;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\DispatchInterface;
+use Ixocreate\Contract\CommandBus\ResultInterface;
 use Psr\Container\ContainerInterface;
 
 final class CommandBus implements DispatchInterface

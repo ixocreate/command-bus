@@ -9,10 +9,10 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus\Result;
+namespace Ixocreate\CommandBus\Result;
 
-use KiwiSuite\Contract\CommandBus\CommandInterface;
-use KiwiSuite\Contract\CommandBus\ResultInterface;
+use Ixocreate\Contract\CommandBus\CommandInterface;
+use Ixocreate\Contract\CommandBus\ResultInterface;
 
 final class Result implements ResultInterface
 {

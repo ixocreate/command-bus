@@ -9,9 +9,9 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuite\CommandBus\Handler;
+namespace Ixocreate\CommandBus\Handler;
 
-use KiwiSuite\ServiceManager\SubManager\SubManager;
+use Ixocreate\ServiceManager\SubManager\SubManager;
 
 final class HandlerSubManager extends SubManager
 {

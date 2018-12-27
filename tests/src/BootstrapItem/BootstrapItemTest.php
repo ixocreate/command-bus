@@ -9,10 +9,10 @@
  */
 
 declare(strict_types=1);
-namespace KiwiSuiteTest\CommandBus\BootstrapItem;
+namespace IxocreateTest\CommandBus\BootstrapItem;
 
-use KiwiSuite\CommandBus\BootstrapItem\BootstrapItem;
-use KiwiSuite\CommandBus\Configurator;
+use Ixocreate\CommandBus\BootstrapItem\BootstrapItem;
+use Ixocreate\CommandBus\Configurator;
 use PHPUnit\Framework\TestCase;
 
 class BootstrapItemTest extends TestCase
@@ -31,7 +31,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\BootstrapItem\BootstrapItem::getConfigurator
+     * @covers \Ixocreate\CommandBus\BootstrapItem\BootstrapItem::getConfigurator
      */
     public function testGetConfigurator()
     {
@@ -39,7 +39,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\BootstrapItem\BootstrapItem::getFileName
+     * @covers \Ixocreate\CommandBus\BootstrapItem\BootstrapItem::getFileName
      */
     public function testGetFilename()
     {
@@ -47,7 +47,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \KiwiSuite\CommandBus\BootstrapItem\BootstrapItem::getVariableName
+     * @covers \Ixocreate\CommandBus\BootstrapItem\BootstrapItem::getVariableName
      */
     public function testGetVariableName()
     {
