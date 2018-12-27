@@ -1,14 +1,12 @@
 <?php
 /**
- * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
- *
- * @package kiwi-suite/command-bus
- * @link https://github.com/kiwi-suite/command-bus
- * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
  * @license MIT License
  */
 
 declare(strict_types=1);
+
 namespace Ixocreate\CommandBus\Result;
 
 use Ixocreate\Contract\CommandBus\CommandInterface;
@@ -20,10 +18,12 @@ final class Result implements ResultInterface
      * @var string
      */
     private $status;
+
     /**
      * @var CommandInterface
      */
     private $command;
+
     /**
      * @var array
      */

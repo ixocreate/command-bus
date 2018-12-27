@@ -1,10 +1,7 @@
 <?php
 /**
- * kiwi-suite/command-bus (https://github.com/kiwi-suite/command-bus)
- *
- * @package kiwi-suite/command-bus
- * @link https://github.com/kiwi-suite/command-bus
- * @copyright Copyright (c) 2010 - 2018 kiwi suite GmbH
+ * @link https://github.com/ixocreate
+ * @copyright IXOCREATE GmbH
  * @license MIT License
  */
 
