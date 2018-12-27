@@ -1,21 +1,19 @@
 **This is a draft. Don't use in production**
 
-# kiwi-suite/command-bus
+# IXOCREATE command-bus
 
-[![Build Status](https://travis-ci.org/kiwi-suite/command-bus.svg?branch=master)](https://travis-ci.org/kiwi-suite/command-bus)
-[![Coverage Status](https://coveralls.io/repos/github/kiwi-suite/command-bus/badge.svg?branch=develop)](https://coveralls.io/github/kiwi-suite/command-bus?branch=develop)
-[![Packagist](https://img.shields.io/packagist/v/kiwi-suite/command-bus.svg)](https://packagist.org/packages/kiwi-suite/command-bus)
-[![Packagist Pre Release](https://img.shields.io/packagist/vpre/kiwi-suite/command-bus.svg)](https://packagist.org/packages/kiwi-suite/command-bus)
-[![Packagist](https://img.shields.io/packagist/l/kiwi-suite/command-bus.svg)](https://packagist.org/packages/kiwi-suite/command-bus)
+[![Build Status](https://travis-ci.org/ixocreate/command-bus.svg?branch=master)](https://travis-ci.org/ixocreate/command-bus)
+[![Coverage Status](https://coveralls.io/repos/github/ixocreate/command-bus/badge.svg?branch=develop)](https://coveralls.io/github/ixocreate/command-bus?branch=develop)
+[![Packagist](https://img.shields.io/packagist/v/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
+[![Packagist Pre Release](https://img.shields.io/packagist/vpre/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
+[![Packagist](https://img.shields.io/packagist/l/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
 
-## Installation
-
-The suggested installation method is via [composer](https://getcomposer.org/):
+Install the package via composer:
 
 ```sh
-php composer.phar require kiwi-suite/command-bus
+composer require ixocreate/command-bus
 ```
 
 ## License
 
-kiwi-suite/command-bus is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT) - see the `LICENSE` file for details
+The MIT License (MIT). Please see [LICENSE](LICENSE) for more information.
