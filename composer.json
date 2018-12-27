@@ -1,24 +1,24 @@
 {
-    "name": "kiwi-suite/command-bus",
-    "description": "kiwi-suite/command-bus",
+    "name": "ixocreate/command-bus",
+    "description": "Command-Bus for IXOCREATE",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Thomas Payer"
+            "name": "IXOCREATE"
         }
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "^7.1",
-        "kiwi-suite/contract": "dev-develop",
+        "ixocreate/contract": "dev-develop",
         "ramsey/uuid": "^3.8",
         "symfony/options-resolver": "^4.1",
         "zendframework/zend-stdlib": "^3.2"
     },
     "require-dev": {
-        "kiwi-suite/servicemanager": "dev-develop",
+        "ixocreate/servicemanager": "dev-develop",
         "friendsofphp/php-cs-fixer": "^2.5",
         "phpunit/phpunit": "^6.0.6",
         "php-coveralls/php-coveralls": "^2.1"
@@ -29,6 +29,6 @@
         }
     },
     "scripts": {
-        "fix-cs": "vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix"
+        "fix-cs": "vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --config vendor/ixocreate/coding-standard/.php_cs"
     }
 }
