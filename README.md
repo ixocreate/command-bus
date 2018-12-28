@@ -2,7 +2,7 @@
 
 # IXOCREATE command-bus
 
-[![Build Status](https://travis-ci.org/ixocreate/command-bus.svg?branch=master)](https://travis-ci.org/ixocreate/command-bus)
+[![Build Status](https://travis-ci.com/ixocreate/command-bus.svg?branch=master)](https://travis-ci.com/ixocreate/command-bus)
 [![Coverage Status](https://coveralls.io/repos/github/ixocreate/command-bus/badge.svg?branch=develop)](https://coveralls.io/github/ixocreate/command-bus?branch=develop)
 [![Packagist](https://img.shields.io/packagist/v/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
