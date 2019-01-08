@@ -1,5 +1,3 @@
-**This is a draft. Don't use in production**
-
 # IXOCREATE command-bus
 
 [![Build Status](https://travis-ci.com/ixocreate/command-bus.svg?branch=master)](https://travis-ci.com/ixocreate/command-bus)
@@ -8,10 +6,19 @@
 [![Packagist Pre Release](https://img.shields.io/packagist/vpre/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
 [![Packagist](https://img.shields.io/packagist/l/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
 
+## Installation
+
 Install the package via composer:
 
 ```sh
 composer require ixocreate/command-bus
+```
+
+## Testing
+
+```sh
+composer install --dev
+phpunit
 ```
 
 ## License
