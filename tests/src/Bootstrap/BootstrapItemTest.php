@@ -29,7 +29,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem::getConfigurator
+     * @covers \Ixocreate\CommandBus\Package\Bootstrap\Bootstrap::getConfigurator
      */
     public function testGetConfigurator()
     {
@@ -37,7 +37,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem::getFileName
+     * @covers \Ixocreate\CommandBus\Package\Bootstrap\Bootstrap::getFileName
      */
     public function testGetFilename()
     {
@@ -45,7 +45,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem::getVariableName
+     * @covers \Ixocreate\CommandBus\Package\Bootstrap\Bootstrap::getVariableName
      */
     public function testGetVariableName()
     {

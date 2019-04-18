@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace Ixocreate\CommandBus\Next;
 
 use Ixocreate\CommandBus\Result\Result;
-use Ixocreate\Application\Console\CommandInterface;;
+use Ixocreate\Application\Console\CommandInterface;
 use Ixocreate\CommandBus\DispatchInterface;
 use Ixocreate\CommandBus\HandlerInterface;
 use Ixocreate\CommandBus\ResultInterface;

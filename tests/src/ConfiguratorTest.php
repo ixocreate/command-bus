@@ -13,7 +13,7 @@ use Ixocreate\CommandBus\Package\Command\CommandSubManager;
 use Ixocreate\CommandBus\Package\Config;
 use Ixocreate\CommandBus\Package\Configurator;
 use Ixocreate\CommandBus\Package\Handler\HandlerSubManager;
-use Ixocreate\Application\ServiceRegistryInterface;
+use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerConfig;
 use PHPUnit\Framework\TestCase;
 

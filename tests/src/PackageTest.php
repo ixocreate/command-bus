@@ -10,8 +10,8 @@ declare(strict_types=1);
 namespace Ixocreate\Test\CommandBus;
 
 use Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem;
-use Ixocreate\Application\ConfiguratorRegistryInterface;
-use Ixocreate\Application\ServiceRegistryInterface;
+use Ixocreate\Application\Service\Configurator\ConfiguratorRegistryInterface;
+use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use Ixocreate\CommandBus\Package\Package;
 use PHPUnit\Framework\TestCase;

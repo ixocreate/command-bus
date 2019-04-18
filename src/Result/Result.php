@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus\Result;
 
-use Ixocreate\Application\Console\CommandInterface;;
+use Ixocreate\Application\Console\CommandInterface;
 use Ixocreate\CommandBus\ResultInterface;
 
 final class Result implements ResultInterface
