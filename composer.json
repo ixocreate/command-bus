@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ixocreate\\CommandBus": "src/"
+            "Ixocreate\\CommandBus\\": "src/"
         }
     },
     "scripts": {
