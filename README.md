@@ -1,10 +1,10 @@
-# IXOCREATE command-bus
+# IXOCREATE Command Bus Library
 
 [![Build Status](https://travis-ci.com/ixocreate/command-bus.svg?branch=master)](https://travis-ci.com/ixocreate/command-bus)
 [![Coverage Status](https://coveralls.io/repos/github/ixocreate/command-bus/badge.svg?branch=develop)](https://coveralls.io/github/ixocreate/command-bus?branch=develop)
 [![Packagist](https://img.shields.io/packagist/v/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
-[![Packagist Pre Release](https://img.shields.io/packagist/vpre/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
-[![Packagist](https://img.shields.io/packagist/l/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
+[![PHP Version](https://img.shields.io/packagist/php-v/ixocreate/command-bus.svg)](https://packagist.org/packages/ixocreate/command-bus)
+[![License](https://img.shields.io/github/license/ixocreate/command-bus.svg)](LICENSE)
 
 ## Installation
 
@@ -20,6 +20,18 @@ composer require ixocreate/command-bus
 composer install --dev
 phpunit
 ```
+
+## Documentation
+
+Learn more about IXOCREATE by reading its [Documentation](https://ixocreate.github.io/).
+
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Security Vulnerabilities
+
+If you discover security vulnerabilities, please address issues directly to opensource@ixocreate.com via e-mail.
 
 ## License
 
