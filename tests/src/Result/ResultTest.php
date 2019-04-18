@@ -9,19 +9,19 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\Result;
 
-use Ixocreate\Package\CommandBus\Result\Result;
-use Ixocreate\Package\CommandBus\CommandInterface;
-use Ixocreate\Package\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Package\Result\Result;
+use Ixocreate\CommandBus\Package\CommandInterface;
+use Ixocreate\CommandBus\Package\ResultInterface;
 use PHPUnit\Framework\TestCase;
 
 class ResultTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\Package\CommandBus\Result\Result::command
-     * @covers \Ixocreate\Package\CommandBus\Result\Result::isSuccessful
-     * @covers \Ixocreate\Package\CommandBus\Result\Result::status
-     * @covers \Ixocreate\Package\CommandBus\Result\Result::messages
-     * @covers \Ixocreate\Package\CommandBus\Result\Result::__construct
+     * @covers \Ixocreate\CommandBus\Package\Result\Result::command
+     * @covers \Ixocreate\CommandBus\Package\Result\Result::isSuccessful
+     * @covers \Ixocreate\CommandBus\Package\Result\Result::status
+     * @covers \Ixocreate\CommandBus\Package\Result\Result::messages
+     * @covers \Ixocreate\CommandBus\Package\Result\Result::__construct
      */
     public function testResult()
     {

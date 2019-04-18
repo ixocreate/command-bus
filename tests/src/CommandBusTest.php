@@ -10,11 +10,11 @@ declare(strict_types=1);
 namespace Ixocreate\Test\CommandBus;
 
 use Ixocreate\CommandBus\CommandBus;
-use Ixocreate\Package\CommandBus\Config;
-use Ixocreate\Package\CommandBus\CommandInterface;
-use Ixocreate\Package\CommandBus\DispatchInterface;
-use Ixocreate\Package\CommandBus\HandlerInterface;
-use Ixocreate\Package\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Package\Config;
+use Ixocreate\CommandBus\Package\CommandInterface;
+use Ixocreate\CommandBus\Package\DispatchInterface;
+use Ixocreate\CommandBus\Package\HandlerInterface;
+use Ixocreate\CommandBus\Package\ResultInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Ramsey\Uuid\Uuid;
@@ -59,8 +59,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::create
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::create
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::__construct
      */
     public function testCreateWithoutDefault()
     {
@@ -75,8 +75,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::create
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::create
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::__construct
      */
     public function testCreateWithDefault()
     {
@@ -91,8 +91,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::dispatch
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::dispatch
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::__construct
      */
     public function testDispatch()
     {
@@ -104,8 +104,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::command
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::command
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::__construct
      */
     public function testCommandWithoutDefault()
     {
@@ -120,8 +120,8 @@ class CommandBusTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::command
-     * @covers \Ixocreate\Package\CommandBus\CommandBus::__construct
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::command
+     * @covers \Ixocreate\CommandBus\Package\CommandBus::__construct
      */
     public function testCommandWithDefault()
     {

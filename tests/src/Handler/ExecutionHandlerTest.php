@@ -9,15 +9,15 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\Handler;
 
-use Ixocreate\Package\CommandBus\Handler\ExecutionHandler;
-use Ixocreate\Package\CommandBus\CommandInterface;
-use Ixocreate\Package\CommandBus\DispatchInterface;
+use Ixocreate\CommandBus\Package\Handler\ExecutionHandler;
+use Ixocreate\CommandBus\Package\CommandInterface;
+use Ixocreate\CommandBus\Package\DispatchInterface;
 use PHPUnit\Framework\TestCase;
 
 class ExecutionHandlerTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\Package\CommandBus\Handler\ExecutionHandler::handle
+     * @covers \Ixocreate\CommandBus\Package\Handler\ExecutionHandler::handle
      */
     public function testHandle()
     {

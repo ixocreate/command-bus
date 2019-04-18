@@ -9,11 +9,11 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\Package\CommandBus\BootstrapItem\BootstrapItem;
+use Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem;
 use Ixocreate\Application\ConfiguratorRegistryInterface;
 use Ixocreate\Application\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
-use Ixocreate\Package\CommandBus\Package;
+use Ixocreate\CommandBus\Package\Package;
 use PHPUnit\Framework\TestCase;
 
 class PackageTest extends TestCase

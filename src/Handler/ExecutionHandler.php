@@ -7,7 +7,7 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\Package\CommandBus\Handler;
+namespace Ixocreate\CommandBus\Package\Handler;
 
 use Ixocreate\CommandBus\Result\Result;
 use Ixocreate\Application\Console\CommandInterface;;

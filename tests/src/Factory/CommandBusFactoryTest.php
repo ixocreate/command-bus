@@ -10,8 +10,8 @@ declare(strict_types=1);
 namespace Ixocreate\Test\CommandBus\Factory;
 
 use Ixocreate\CommandBus\CommandBus;
-use Ixocreate\Package\CommandBus\Config;
-use Ixocreate\Package\CommandBus\Factory\CommandBusFactory;
+use Ixocreate\CommandBus\Package\Config;
+use Ixocreate\CommandBus\Package\Factory\CommandBusFactory;
 use Ixocreate\ServiceManager\ServiceManagerInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
@@ -19,7 +19,7 @@ use Psr\Container\ContainerInterface;
 final class CommandBusFactoryTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\Package\CommandBus\Factory\CommandBusFactory::__invoke
+     * @covers \Ixocreate\CommandBus\Package\Factory\CommandBusFactory::__invoke
      */
     public function testFactory()
     {

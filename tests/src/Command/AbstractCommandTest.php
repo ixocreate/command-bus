@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\Command;
 
-use Ixocreate\Package\CommandBus\Command\AbstractCommand;
+use Ixocreate\CommandBus\Package\Command\AbstractCommand;
 use PHPUnit\Framework\TestCase;
 use Ramsey\Uuid\Uuid;
 
@@ -23,8 +23,8 @@ class AbstractCommandTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::uuid
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::withUuid
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::uuid
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::withUuid
      */
     public function testUuid()
     {
@@ -34,7 +34,7 @@ class AbstractCommandTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::uuid
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::uuid
      */
     public function testUuidDefault()
     {
@@ -44,8 +44,8 @@ class AbstractCommandTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::createdAt
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::withCreatedAt
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::createdAt
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::withCreatedAt
      */
     public function testCreatedAt()
     {
@@ -60,7 +60,7 @@ class AbstractCommandTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::createdAt
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::createdAt
      */
     public function testCreatedAtDefault()
     {
@@ -68,8 +68,8 @@ class AbstractCommandTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::data
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::withData
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::data
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::withData
      */
     public function testData()
     {
@@ -78,7 +78,7 @@ class AbstractCommandTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::data
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::data
      */
     public function testDataDefault()
     {
@@ -86,7 +86,7 @@ class AbstractCommandTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\Package\CommandBus\Command\AbstractCommand::dataValue
+     * @covers \Ixocreate\CommandBus\Package\Command\AbstractCommand::dataValue
      */
     public function testDataValue()
     {
