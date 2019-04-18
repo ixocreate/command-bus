@@ -9,10 +9,10 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\CommandBus\Package\Command\CommandSubManager;
-use Ixocreate\CommandBus\Package\Config;
-use Ixocreate\CommandBus\Package\Configurator;
-use Ixocreate\CommandBus\Package\Handler\HandlerSubManager;
+use Ixocreate\CommandBus\Command\CommandSubManager;
+use Ixocreate\CommandBus\Config;
+use Ixocreate\CommandBus\Configurator;
+use Ixocreate\CommandBus\Handler\HandlerSubManager;
 use Ixocreate\Application\Service\Registry\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerConfig;
 use PHPUnit\Framework\TestCase;
@@ -20,7 +20,7 @@ use PHPUnit\Framework\TestCase;
 class ConfiguratorTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\CommandBus\Package\Configurator
+     * @covers \Ixocreate\CommandBus\Configurator
      */
     public function testConfigurator()
     {

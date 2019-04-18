@@ -9,11 +9,11 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\Next;
 
-use Ixocreate\CommandBus\Package\Next\Next;
-use Ixocreate\CommandBus\Package\CommandInterface;
-use Ixocreate\CommandBus\Package\DispatchInterface;
-use Ixocreate\CommandBus\Package\HandlerInterface;
-use Ixocreate\CommandBus\Package\ResultInterface;
+use Ixocreate\CommandBus\Next\Next;
+use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\CommandBus\DispatchInterface;
+use Ixocreate\CommandBus\HandlerInterface;
+use Ixocreate\CommandBus\ResultInterface;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
@@ -46,8 +46,8 @@ class NextTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Next\Next::dispatch
-     * @covers \Ixocreate\CommandBus\Package\Next\Next::__construct
+     * @covers \Ixocreate\CommandBus\Next\Next::dispatch
+     * @covers \Ixocreate\CommandBus\Next\Next::__construct
      */
     public function testEmptyQueue()
     {
@@ -60,8 +60,8 @@ class NextTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Next\Next::dispatch
-     * @covers \Ixocreate\CommandBus\Package\Next\Next::__construct
+     * @covers \Ixocreate\CommandBus\Next\Next::dispatch
+     * @covers \Ixocreate\CommandBus\Next\Next::__construct
      */
     public function testPipeline()
     {

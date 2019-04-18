@@ -9,14 +9,14 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\CommandBus\Package\Config;
+use Ixocreate\CommandBus\Config;
 use PHPUnit\Framework\TestCase;
 
 class ConfigTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\CommandBus\Package\Config::handlers
-     * @covers \Ixocreate\CommandBus\Package\Config::__construct
+     * @covers \Ixocreate\CommandBus\Config::handlers
+     * @covers \Ixocreate\CommandBus\Config::__construct
      */
     public function testConfig()
     {
@@ -28,9 +28,9 @@ class ConfigTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Config::serialize
-     * @covers \Ixocreate\CommandBus\Package\Config::unserialize
-     * @covers \Ixocreate\CommandBus\Package\Config::__construct
+     * @covers \Ixocreate\CommandBus\Config::serialize
+     * @covers \Ixocreate\CommandBus\Config::unserialize
+     * @covers \Ixocreate\CommandBus\Config::__construct
      */
     public function testSerializable()
     {

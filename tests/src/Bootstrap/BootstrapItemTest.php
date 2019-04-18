@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\BootstrapItem;
 
-use Ixocreate\CommandBus\Package\Bootstrap\BootstrapItem;
-use Ixocreate\CommandBus\Package\Configurator;
+use Ixocreate\CommandBus\Bootstrap\BootstrapItem;
+use Ixocreate\CommandBus\Configurator;
 use PHPUnit\Framework\TestCase;
 
 class BootstrapItemTest extends TestCase
@@ -29,7 +29,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Bootstrap\Bootstrap::getConfigurator
+     * @covers \Ixocreate\CommandBus\Bootstrap\Bootstrap::getConfigurator
      */
     public function testGetConfigurator()
     {
@@ -37,7 +37,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Bootstrap\Bootstrap::getFileName
+     * @covers \Ixocreate\CommandBus\Bootstrap\Bootstrap::getFileName
      */
     public function testGetFilename()
     {
@@ -45,7 +45,7 @@ class BootstrapItemTest extends TestCase
     }
 
     /**
-     * @covers \Ixocreate\CommandBus\Package\Bootstrap\Bootstrap::getVariableName
+     * @covers \Ixocreate\CommandBus\Bootstrap\Bootstrap::getVariableName
      */
     public function testGetVariableName()
     {
