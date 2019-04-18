@@ -7,21 +7,21 @@
 
 declare(strict_types=1);
 
-namespace IxocreateTest\CommandBus\Result;
+namespace Ixocreate\Test\CommandBus\Result;
 
-use Ixocreate\CommandBus\Result\Result;
-use Ixocreate\Contract\CommandBus\CommandInterface;
-use Ixocreate\Contract\CommandBus\ResultInterface;
+use Ixocreate\Package\CommandBus\Result\Result;
+use Ixocreate\Package\CommandBus\CommandInterface;
+use Ixocreate\Package\CommandBus\ResultInterface;
 use PHPUnit\Framework\TestCase;
 
 class ResultTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\CommandBus\Result\Result::command
-     * @covers \Ixocreate\CommandBus\Result\Result::isSuccessful
-     * @covers \Ixocreate\CommandBus\Result\Result::status
-     * @covers \Ixocreate\CommandBus\Result\Result::messages
-     * @covers \Ixocreate\CommandBus\Result\Result::__construct
+     * @covers \Ixocreate\Package\CommandBus\Result\Result::command
+     * @covers \Ixocreate\Package\CommandBus\Result\Result::isSuccessful
+     * @covers \Ixocreate\Package\CommandBus\Result\Result::status
+     * @covers \Ixocreate\Package\CommandBus\Result\Result::messages
+     * @covers \Ixocreate\Package\CommandBus\Result\Result::__construct
      */
     public function testResult()
     {

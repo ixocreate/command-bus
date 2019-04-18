@@ -7,13 +7,13 @@
 
 declare(strict_types=1);
 
-namespace IxocreateTest\CommandBus;
+namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\CommandBus\BootstrapItem\BootstrapItem;
-use Ixocreate\Contract\Application\ConfiguratorRegistryInterface;
-use Ixocreate\Contract\Application\ServiceRegistryInterface;
-use Ixocreate\Contract\ServiceManager\ServiceManagerInterface;
-use Ixocreate\CommandBus\Package;
+use Ixocreate\Package\CommandBus\BootstrapItem\BootstrapItem;
+use Ixocreate\Application\ConfiguratorRegistryInterface;
+use Ixocreate\Application\ServiceRegistryInterface;
+use Ixocreate\ServiceManager\ServiceManagerInterface;
+use Ixocreate\Package\CommandBus\Package;
 use PHPUnit\Framework\TestCase;
 
 class PackageTest extends TestCase

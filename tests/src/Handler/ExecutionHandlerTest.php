@@ -7,17 +7,17 @@
 
 declare(strict_types=1);
 
-namespace IxocreateTest\CommandBus\Handler;
+namespace Ixocreate\Test\CommandBus\Handler;
 
-use Ixocreate\CommandBus\Handler\ExecutionHandler;
-use Ixocreate\Contract\CommandBus\CommandInterface;
-use Ixocreate\Contract\CommandBus\DispatchInterface;
+use Ixocreate\Package\CommandBus\Handler\ExecutionHandler;
+use Ixocreate\Package\CommandBus\CommandInterface;
+use Ixocreate\Package\CommandBus\DispatchInterface;
 use PHPUnit\Framework\TestCase;
 
 class ExecutionHandlerTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\CommandBus\Handler\ExecutionHandler::handle
+     * @covers \Ixocreate\Package\CommandBus\Handler\ExecutionHandler::handle
      */
     public function testHandle()
     {

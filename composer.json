@@ -1,6 +1,6 @@
 {
     "name": "ixocreate/command-bus",
-    "description": "Command-Bus for IXOCREATE",
+    "description": "IXOCREATE Command Bus Library",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -12,20 +12,18 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.1",
-        "ixocreate/contract": "dev-develop",
-        "ixocreate/servicemanager": "dev-develop",
         "ramsey/uuid": "^3.8",
         "symfony/options-resolver": "^4.1",
         "zendframework/zend-stdlib": "^3.2"
     },
     "require-dev": {
-        "ixocreate/coding-standard": "^1.0.1",
+        "ixocreate/coding-standard": "^1.0",
         "php-coveralls/php-coveralls": "^2.1",
         "phpunit/phpunit": "^7.0"
     },
     "autoload": {
         "psr-4": {
-            "Ixocreate\\CommandBus\\": "src/"
+            "Ixocreate\\CommandBus": "src/"
         }
     },
     "scripts": {

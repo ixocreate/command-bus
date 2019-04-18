@@ -10,9 +10,6 @@ declare(strict_types=1);
 namespace Ixocreate\CommandBus;
 
 use Ixocreate\CommandBus\Next\Next;
-use Ixocreate\Contract\CommandBus\CommandInterface;
-use Ixocreate\Contract\CommandBus\DispatchInterface;
-use Ixocreate\Contract\CommandBus\ResultInterface;
 use Psr\Container\ContainerInterface;
 
 final class CommandBus implements DispatchInterface
@@ -34,12 +31,16 @@ final class CommandBus implements DispatchInterface
 
     /**
      * CommandBus constructor.
+     *
      * @param Config $config
      * @param ContainerInterface $handlerContainer
      * @param ContainerInterface $commandContainer
      */
-    public function __construct(Config $config, ContainerInterface $handlerContainer, ContainerInterface $commandContainer)
-    {
+    public function __construct(
+        Config $config,
+        ContainerInterface $handlerContainer,
+        ContainerInterface $commandContainer
+    ) {
         $this->config = $config;
         $this->handlerContainer = $handlerContainer;
         $this->commandContainer = $commandContainer;
@@ -52,8 +53,12 @@ final class CommandBus implements DispatchInterface
      * @param \DateTimeInterface|null $createdAt
      * @return CommandInterface
      */
-    public function create(string $name, array $data, ?string $uuid = null, ?\DateTimeInterface $createdAt = null): CommandInterface
-    {
+    public function create(
+        string $name,
+        array $data,
+        ?string $uuid = null,
+        ?\DateTimeInterface $createdAt = null
+    ): CommandInterface {
         /** @var CommandInterface $command */
         $command = $this->commandContainer->get($name)->withData($data);
 
@@ -75,8 +80,12 @@ final class CommandBus implements DispatchInterface
      * @param \DateTimeInterface|null $createdAt
      * @return ResultInterface
      */
-    public function command(string $name, array $data, ?string $uuid = null, ?\DateTimeInterface $createdAt = null): ResultInterface
-    {
+    public function command(
+        string $name,
+        array $data,
+        ?string $uuid = null,
+        ?\DateTimeInterface $createdAt = null
+    ): ResultInterface {
         return $this->dispatch($this->create($name, $data, $uuid, $createdAt));
     }
 

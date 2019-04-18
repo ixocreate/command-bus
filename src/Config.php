@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus;
 
-use Ixocreate\Contract\Application\SerializableServiceInterface;
+use Ixocreate\Application\SerializableServiceInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 final class Config implements SerializableServiceInterface

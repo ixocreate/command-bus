@@ -10,10 +10,10 @@ declare(strict_types=1);
 namespace Ixocreate\CommandBus\Next;
 
 use Ixocreate\CommandBus\Result\Result;
-use Ixocreate\Contract\CommandBus\CommandInterface;
-use Ixocreate\Contract\CommandBus\DispatchInterface;
-use Ixocreate\Contract\CommandBus\HandlerInterface;
-use Ixocreate\Contract\CommandBus\ResultInterface;
+use Ixocreate\Application\Console\CommandInterface;;
+use Ixocreate\CommandBus\DispatchInterface;
+use Ixocreate\CommandBus\HandlerInterface;
+use Ixocreate\CommandBus\ResultInterface;
 use Psr\Container\ContainerInterface;
 
 final class Next implements DispatchInterface

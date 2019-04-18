@@ -7,20 +7,20 @@
 
 declare(strict_types=1);
 
-namespace IxocreateTest\CommandBus;
+namespace Ixocreate\Test\CommandBus;
 
-use Ixocreate\CommandBus\Command\CommandSubManager;
-use Ixocreate\CommandBus\Config;
-use Ixocreate\CommandBus\Configurator;
-use Ixocreate\CommandBus\Handler\HandlerSubManager;
-use Ixocreate\Contract\Application\ServiceRegistryInterface;
+use Ixocreate\Package\CommandBus\Command\CommandSubManager;
+use Ixocreate\Package\CommandBus\Config;
+use Ixocreate\Package\CommandBus\Configurator;
+use Ixocreate\Package\CommandBus\Handler\HandlerSubManager;
+use Ixocreate\Application\ServiceRegistryInterface;
 use Ixocreate\ServiceManager\ServiceManagerConfig;
 use PHPUnit\Framework\TestCase;
 
 class ConfiguratorTest extends TestCase
 {
     /**
-     * @covers \Ixocreate\CommandBus\Configurator
+     * @covers \Ixocreate\Package\CommandBus\Configurator
      */
     public function testConfigurator()
     {
