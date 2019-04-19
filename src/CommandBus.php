@@ -41,6 +41,9 @@ final class CommandBus implements DispatchInterface
         ContainerInterface $handlerContainer,
         ContainerInterface $commandContainer
     ) {
+        /**
+         * TODO: this should be detached from Config
+         */
         $this->config = $config;
         $this->handlerContainer = $handlerContainer;
         $this->commandContainer = $commandContainer;
