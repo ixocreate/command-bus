@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus\Result;
 
-use Ixocreate\Contract\CommandBus\CommandInterface;
-use Ixocreate\Contract\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\CommandBus\ResultInterface;
 
 final class Result implements ResultInterface
 {

@@ -7,11 +7,11 @@
 
 declare(strict_types=1);
 
-namespace IxocreateTest\CommandBus\Result;
+namespace Ixocreate\Test\CommandBus\Result;
 
 use Ixocreate\CommandBus\Result\Result;
-use Ixocreate\Contract\CommandBus\CommandInterface;
-use Ixocreate\Contract\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\CommandBus\ResultInterface;
 use PHPUnit\Framework\TestCase;
 
 class ResultTest extends TestCase

@@ -7,11 +7,11 @@
 
 declare(strict_types=1);
 
-namespace IxocreateTest\CommandBus\Handler;
+namespace Ixocreate\Test\CommandBus\Handler;
 
 use Ixocreate\CommandBus\Handler\ExecutionHandler;
-use Ixocreate\Contract\CommandBus\CommandInterface;
-use Ixocreate\Contract\CommandBus\DispatchInterface;
+use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\CommandBus\DispatchInterface;
 use PHPUnit\Framework\TestCase;
 
 class ExecutionHandlerTest extends TestCase
