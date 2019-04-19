@@ -9,10 +9,10 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus\Next;
 
-use Ixocreate\CommandBus\Result\Result;
 use Ixocreate\CommandBus\CommandInterface;
 use Ixocreate\CommandBus\DispatchInterface;
 use Ixocreate\CommandBus\HandlerInterface;
+use Ixocreate\CommandBus\Result\Result;
 use Ixocreate\CommandBus\ResultInterface;
 use Psr\Container\ContainerInterface;
 

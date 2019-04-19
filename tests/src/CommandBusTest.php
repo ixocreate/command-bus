@@ -10,8 +10,8 @@ declare(strict_types=1);
 namespace Ixocreate\Test\CommandBus;
 
 use Ixocreate\CommandBus\CommandBus;
-use Ixocreate\CommandBus\Config;
 use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\CommandBus\Config;
 use Ixocreate\CommandBus\DispatchInterface;
 use Ixocreate\CommandBus\HandlerInterface;
 use Ixocreate\CommandBus\ResultInterface;

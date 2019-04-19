@@ -9,10 +9,10 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\Next;
 
-use Ixocreate\CommandBus\Next\Next;
 use Ixocreate\CommandBus\CommandInterface;
 use Ixocreate\CommandBus\DispatchInterface;
 use Ixocreate\CommandBus\HandlerInterface;
+use Ixocreate\CommandBus\Next\Next;
 use Ixocreate\CommandBus\ResultInterface;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;

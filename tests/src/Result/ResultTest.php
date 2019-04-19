@@ -9,8 +9,8 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\Result;
 
-use Ixocreate\CommandBus\Result\Result;
 use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\CommandBus\Result\Result;
 use Ixocreate\CommandBus\ResultInterface;
 use PHPUnit\Framework\TestCase;
 
