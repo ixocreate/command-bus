@@ -9,15 +9,16 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus;
 
+use Ixocreate\CommandBus\Command\CommandInterface;
 use Ixocreate\CommandBus\CommandBus;
-use Ixocreate\CommandBus\CommandInterface;
-use Ixocreate\CommandBus\Config;
-use Ixocreate\CommandBus\DispatchInterface;
-use Ixocreate\CommandBus\HandlerInterface;
-use Ixocreate\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\CommandBusConfigInterface;
+use Ixocreate\CommandBus\Dispatch\DispatchInterface;
+use Ixocreate\CommandBus\Handler\HandlerInterface;
+use Ixocreate\CommandBus\Result\ResultInterface;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
 use Ramsey\Uuid\Uuid;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class CommandBusTest extends TestCase
 {
@@ -39,7 +40,10 @@ class CommandBusTest extends TestCase
         $this->command->method("withData")->willReturnSelf();
 
         $this->handler = $this->createMock(HandlerInterface::class);
-        $this->handler->method("handle")->willReturnCallback(function (CommandInterface $command, DispatchInterface $dispatcher) {
+        $this->handler->method("handle")->willReturnCallback(function (
+            CommandInterface $command,
+            DispatchInterface $dispatcher
+        ) {
             return $dispatcher->dispatch($command);
         });
 
@@ -55,7 +59,25 @@ class CommandBusTest extends TestCase
                 return $this->command;
             });
 
-        $this->config = new Config(['handlers' => ['handler1', 'handler2']]);
+        $this->config = (new class(['handlers' => ['handler1', 'handler2']]) implements CommandBusConfigInterface {
+            private $config = [];
+
+            public function __construct(array $config)
+            {
+                $resolver = new OptionsResolver();
+                $resolver->setDefaults([
+                    'handlers' => [],
+                ]);
+                $resolver->setAllowedTypes('handlers', 'string[]');
+
+                $this->config = $resolver->resolve($config);
+            }
+
+            public function handlers(): array
+            {
+                return $this->config['handlers'];
+            }
+        });
     }
 
     /**
@@ -67,7 +89,6 @@ class CommandBusTest extends TestCase
         $this->command->expects($this->once())->method("withUuid");
         $this->command->expects($this->once())->method("withData");
         $this->command->expects($this->once())->method("withCreatedAt");
-
 
         $commandBus = new CommandBus($this->config, $this->handlerContainer, $this->commandContainer);
         $command = $commandBus->create("test", ['data'], Uuid::uuid4()->toString(), new \DateTimeImmutable());
@@ -83,7 +104,6 @@ class CommandBusTest extends TestCase
         $this->command->expects($this->never())->method("withUuid");
         $this->command->expects($this->once())->method("withData");
         $this->command->expects($this->never())->method("withCreatedAt");
-
 
         $commandBus = new CommandBus($this->config, $this->handlerContainer, $this->commandContainer);
         $command = $commandBus->create("test", ['data']);

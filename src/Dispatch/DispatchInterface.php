@@ -7,7 +7,10 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus;
+namespace Ixocreate\CommandBus\Dispatch;
+
+use Ixocreate\CommandBus\Command\CommandInterface;
+use Ixocreate\CommandBus\Result\ResultInterface;
 
 interface DispatchInterface
 {

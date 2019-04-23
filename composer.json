@@ -12,7 +12,6 @@
     "prefer-stable": true,
     "require": {
         "php": "^7.1",
-        "ixocreate/servicemanager": "^0.1",
         "ramsey/uuid": "^3.8",
         "symfony/options-resolver": "^4.1",
         "zendframework/zend-stdlib": "^3.2"

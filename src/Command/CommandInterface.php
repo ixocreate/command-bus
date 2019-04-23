@@ -7,11 +7,9 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus;
+namespace Ixocreate\CommandBus\Command;
 
-use Ixocreate\ServiceManager\NamedServiceInterface;
-
-interface CommandInterface extends NamedServiceInterface
+interface CommandInterface
 {
     /**
      * @return bool

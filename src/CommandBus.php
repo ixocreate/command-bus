@@ -9,13 +9,16 @@ declare(strict_types=1);
 
 namespace Ixocreate\CommandBus;
 
-use Ixocreate\CommandBus\Next\Next;
+use Ixocreate\CommandBus\Command\CommandInterface;
+use Ixocreate\CommandBus\Dispatch\DispatchInterface;
+use Ixocreate\CommandBus\Dispatch\Next;
+use Ixocreate\CommandBus\Result\ResultInterface;
 use Psr\Container\ContainerInterface;
 
 final class CommandBus implements DispatchInterface
 {
     /**
-     * @var Config
+     * @var CommandBusConfigInterface
      */
     private $config;
 
@@ -32,12 +35,12 @@ final class CommandBus implements DispatchInterface
     /**
      * CommandBus constructor.
      *
-     * @param Config $config
+     * @param CommandBusConfigInterface $config
      * @param ContainerInterface $handlerContainer
      * @param ContainerInterface $commandContainer
      */
     public function __construct(
-        Config $config,
+        CommandBusConfigInterface $config,
         ContainerInterface $handlerContainer,
         ContainerInterface $commandContainer
     ) {

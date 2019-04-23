@@ -9,9 +9,9 @@ declare(strict_types=1);
 
 namespace Ixocreate\Test\CommandBus\Result;
 
-use Ixocreate\CommandBus\CommandInterface;
+use Ixocreate\CommandBus\Command\CommandInterface;
 use Ixocreate\CommandBus\Result\Result;
-use Ixocreate\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Result\ResultInterface;
 use PHPUnit\Framework\TestCase;
 
 class ResultTest extends TestCase
