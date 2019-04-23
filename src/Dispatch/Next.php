@@ -7,13 +7,12 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus\Next;
+namespace Ixocreate\CommandBus\Dispatch;
 
+use Ixocreate\CommandBus\Command\CommandInterface;
+use Ixocreate\CommandBus\Handler\HandlerInterface;
 use Ixocreate\CommandBus\Result\Result;
-use Ixocreate\CommandBus\CommandInterface;
-use Ixocreate\CommandBus\DispatchInterface;
-use Ixocreate\CommandBus\HandlerInterface;
-use Ixocreate\CommandBus\ResultInterface;
+use Ixocreate\CommandBus\Result\ResultInterface;
 use Psr\Container\ContainerInterface;
 
 final class Next implements DispatchInterface
@@ -30,6 +29,7 @@ final class Next implements DispatchInterface
 
     /**
      * Next constructor.
+     *
      * @param \SplQueue $queue
      * @param ContainerInterface $container
      */

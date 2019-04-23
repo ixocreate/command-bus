@@ -7,7 +7,9 @@
 
 declare(strict_types=1);
 
-namespace Ixocreate\CommandBus;
+namespace Ixocreate\CommandBus\Result;
+
+use Ixocreate\CommandBus\Command\CommandInterface;
 
 interface ResultInterface
 {
