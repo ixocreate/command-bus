@@ -15,7 +15,7 @@ install:
 
 script:
   - if [ $TRAVIS_PHP_VERSION = '7.2' ]; then vendor/bin/phpunit --coverage-clover build/logs/clover.xml; else vendor/bin/phpunit; fi
-  - if [ $TRAVIS_PHP_VERSION = '7.2' ]; then vendor/bin/php-cs-fixer fix --config=vendor/ixocreate/coding-standard/.php_cs -v --dry-run --using-cache=no --path-mode=intersection `git diff --name-only --diff-filter=ACMRTUXB $TRAVIS_COMMIT_RANGE`; fi
+  - if [ $TRAVIS_PHP_VERSION = '7.2' ]; then vendor/bin/php-cs-fixer fix --config=vendor/ixocreate/coding-standard/.php_cs -v --diff --dry-run --using-cache=no; fi
 
 after_success:
   - if [ $TRAVIS_PHP_VERSION = '7.2' ]; then php vendor/bin/php-coveralls -v; fi
@@ -23,4 +23,7 @@ after_success:
 notifications:
   email: false
   slack:
-    secure: "kK0iQoXTkR9iz7z9T8/Wj4VhBbdmJt27TcLUtBLbS0omhmld/PsJKzIcxtfs/Uks3c0DMO/OeEASx33n7P9VsvbCvd5KPcvmemuIrnl+H2ZhqpTrDCKAHbXUaz+RcG5RWDEa+NxCFu93Df4z4A2dkdoGIXi9PukUB/HK25fCI4qwX4EZ1IaGWa1/CjiuxWCW19f0H4dazoJFEnZVxR+dOLysKNZK94jX84OUzsMD0qKzINQ7UywZN/5t68tfKRvIR4Uz7REtCzK9tWrskzmRKSgTsUxcrVvjZkT8Ozc/5UbgXf4tT5r2Bsl9y3+sQnG7Q2UNSpw8BaAgw8xmmU0g40iXWgbXKjX5vmeFhvqpAs6GC870X3CFzP/M+GKaEmmLRQs0JLTBgMrw7ki4Q9RuRRx2m6eIjjAz/FJHaRYE3WA4VN8qTJOXqPvK7gVIAi6jMsljuUL9ptheGarKo1HMeq1OHoXUAXWgDcai50Oaotfe9uWd0L5lKYhWSBCmZQWOVL7Rc1ZNR44pqQr0j/8qwtBmUGwq42uilrDTA7/WzJysL0SWoEVzAZJ2V9KUIcS65lctV/syMYU2NgcwVG7e3IaeirpUVXATho+uGp8eL1GqcjJD5Pa6ThzE45w1a0qC/epna+l3929awOeJDTJxjPWRFqpH0KrxDMKOGSPf4k4="
+    on_success: always
+    on_failure: always
+    rooms:
+      secure: "J2M+yYO9ZVuPRIqyquAFfmbIcHQe0vZ5BVyqkd2f+OKHu9NJGXwt4sjwV/QXaZMsj0IqYu6HctUFSxDVEOBkospjgFtguJqzwZNy8lbGKeNBlKLk91yB6V5+w/R5Ygo+kyy+g0NJpUoEHb28SZxxOb3Dc3X1P3aZgHX5B/5DUi2Ci7FQB2oQ6cxy3C+QILBU6WOz9jIb7dnLngLSjw0u8vTN/3M992vMVAi0CtomFIcXGg7dm+5pOmqF+bWsU7KQnD2Ydt8chkyZrttiB16Dcj9FtZyVgNj4eXr4mhuKwlxZkInnPpeeB1myjciD4u+ypjstzeWFmf8xfGBZbHGgmmGTj3ltqX2w24YSYAQQfNJs5HgcUvdu631wVlGkvNcbtN0iIk/9RTFp2S2ilaH9vKgAM5wb3fUTvHj+UolV7m9mr0abszXOrYifP+xXq+h2dMkr2bMAGzp3+hZeweuWxw5rMHt1HUOeCdmVwzlpL+A5rTlmGObp4srGDTHYIWruWwVIIFtMZg7+KYnVqG+/qV1NJ7XE8i313/sk8gtZfwjX+6e0WFbivAMm1dhnN+zhUoN9zzHv/RQO/3bOqTZxEjVUmPhS7UKjKtPxdzTwUUIOO84Z6xAXfUdfjPylcyLs6a84NJeZf9Az715C2ZfbTDY/mrqYzYkBgjimu6urb0w="
