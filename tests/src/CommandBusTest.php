@@ -32,7 +32,7 @@ class CommandBusTest extends TestCase
 
     private $config;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = $this->createMock(CommandInterface::class);
         $this->command->method("withUuid")->willReturnSelf();

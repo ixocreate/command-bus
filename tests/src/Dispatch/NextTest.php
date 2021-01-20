@@ -29,7 +29,7 @@ class NextTest extends TestCase
      */
     private $handler;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->command = $this->createMock(CommandInterface::class);
 
