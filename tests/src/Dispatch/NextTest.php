@@ -34,12 +34,12 @@ class NextTest extends TestCase
         $this->command = $this->createMock(CommandInterface::class);
 
         $this->handler = $this->createMock(HandlerInterface::class);
-        $this->handler->method("handle")->willReturnCallback(function (CommandInterface $command, DispatchInterface $dispatcher) {
+        $this->handler->method('handle')->willReturnCallback(function (CommandInterface $command, DispatchInterface $dispatcher) {
             return $dispatcher->dispatch($command);
         });
 
         $this->container = $this->createMock(ContainerInterface::class);
-        $this->container->method("get")
+        $this->container->method('get')
             ->willReturnCallback(function ($argument) {
                 return $this->handler;
             });
@@ -65,12 +65,12 @@ class NextTest extends TestCase
      */
     public function testPipeline()
     {
-        $this->handler->expects($this->exactly(3))->method("handle");
+        $this->handler->expects($this->exactly(3))->method('handle');
 
         $queue = new \SplQueue();
-        $queue->enqueue("handler1");
-        $queue->enqueue("handler2");
-        $queue->enqueue("handler3");
+        $queue->enqueue('handler1');
+        $queue->enqueue('handler2');
+        $queue->enqueue('handler3');
 
         $next = new Next($queue, $this->container);
         $result = $next->dispatch($this->command);

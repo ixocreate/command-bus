@@ -22,17 +22,17 @@ class ExecutionHandlerTest extends TestCase
     public function testHandle()
     {
         $dispatcher = $this->createMock(DispatchInterface::class);
-        $dispatcher->method("dispatch")->willThrowException(new \Exception());
+        $dispatcher->method('dispatch')->willThrowException(new \Exception());
 
         $command = $this->createMock(CommandInterface::class);
-        $command->method("execute")->willReturn(true);
+        $command->method('execute')->willReturn(true);
         $handler = new ExecutionHandler();
         $result = $handler->handle($command, $dispatcher);
         $this->assertTrue($result->isSuccessful());
         $this->assertSame($command, $result->command());
 
         $command = $this->createMock(CommandInterface::class);
-        $command->method("execute")->willReturn(false);
+        $command->method('execute')->willReturn(false);
         $handler = new ExecutionHandler();
         $result = $handler->handle($command, $dispatcher);
         $this->assertFalse($result->isSuccessful());
